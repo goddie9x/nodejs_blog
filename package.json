@@ -2,9 +2,10 @@
     "name": "blog",
     "version": "1.0.0",
     "description": "tao blog",
-    "main": "app.js",
+    "main": "src/app.js",
     "scripts": {
-        "start": "nodemon --inspect app.js",
+        "start": "nodemon --inspect src/app.js",
+        "comcss": "node-sass --watch src/resource/scss/ -o src/public/css/",
         "test": "echo \"Error: no test specified\" && exit 1"
     },
     "repository": {
@@ -22,9 +23,12 @@
     },
     "homepage": "https://github.com/goddie9x/nodejs_blog#readme",
     "dependencies": {
-        "express": "^4.17.1"
+        "chalk": "^4.1.2",
+        "express": "^4.17.1",
+        "express-handlebars": "^5.3.2"
     },
     "devDependencies": {
+        "morgan": "^1.10.0",
         "nodemon": "^2.0.12"
     }
 }
