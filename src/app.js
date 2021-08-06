@@ -4,9 +4,16 @@ const morgan = require('morgan');
 const handlebars = require('express-handlebars');
 const app = express();
 const port = 3000;
+const route = require('./routes');
 
 app.use(express.static(path.join(__dirname, 'public')));
-app.use(morgan('combined'));
+/* app.use(morgan('combined')); */
+
+app.use(express.urlencoded({
+    extended: true
+}));
+
+app.use(express.json());
 
 app.engine('tam', handlebars({
     extname: '.tam'
@@ -14,13 +21,14 @@ app.engine('tam', handlebars({
 app.set('view engine', 'tam');
 app.set('views', path.join(__dirname, 'resource\\views'));
 
-app.get('/', (req, res) => {
+//Route
+route(app);
+/* 
+app.post('/search', (req, res) => {
+    console.log(req.body);
+    res.render('search');
+}); */
 
-    res.render('home');
-})
-app.get('/tin-tuc', (req, res) => {
-    res.render('news');
-})
 app.listen(port, () => {
     console.log(`app listening at http://localhost:${port}`);
-})
+});
