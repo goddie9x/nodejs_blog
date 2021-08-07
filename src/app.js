@@ -9,15 +9,20 @@ const route = require('./routes');
 app.use(express.static(path.join(__dirname, 'public')));
 /* app.use(morgan('combined')); */
 
-app.use(express.urlencoded({
-    extended: true
-}));
+app.use(
+ express.urlencoded({
+  extended: true,
+ }),
+);
 
 app.use(express.json());
 
-app.engine('tam', handlebars({
-    extname: '.tam'
-}));
+app.engine(
+ 'tam',
+ handlebars({
+  extname: '.tam',
+ }),
+);
 app.set('view engine', 'tam');
 app.set('views', path.join(__dirname, 'resource\\views'));
 
@@ -30,5 +35,5 @@ app.post('/search', (req, res) => {
 }); */
 
 app.listen(port, () => {
-    console.log(`app listening at http://localhost:${port}`);
+ console.log(`app listening at http://localhost:${port}`);
 });
