@@ -1,0 +1,19 @@
+<form class="mt-4" method="POST" action="/courses/store">
+    <div class=" mb-3">
+      <label for="name" class="form-label">Nhập tên khoá học</label>
+      <input type="text" id="name" class="form-control" name="name" placeholder="Nhập tên khoá học">
+    </div>
+    <div class="mb-3">
+      <label for="description" class="form-label">Nhập mô tả</label>
+      <input type="text" id="description" class="form-control" name="description" placeholder="Nhập mô tả">
+    </div>
+    <div class="mb-3">
+    <label for="level" class="form-label">Nhập level</label>
+      <input type="text" id="level" name="level" class="form-control" placeholder="Nhập level">
+    </div>
+    <div class="mb-3">
+      <label for="videoYtId" class="form-label">Nhập Id video youtube</label>
+      <input type="text" id="videoYtId" class="form-control" name="videoYtId" placeholder="Nhập Id video youtube">
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>

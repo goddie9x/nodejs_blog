@@ -1,4 +1,23 @@
 @import 'variable';
-body {
- color: $red-color;
+a {
+    text-decoration: none;
+}
+
+.user-avatar {
+    width: 35px;
+    height: 35px;
+    margin-right: 10px;
+    border-radius: 100px;
+}
+
+.desc i::before {
+    content: "\f160";
+}
+
+.asc i::before {
+    content: "\f884";
+}
+
+.select-all-checkbox-options {
+    width: 150px;
 }
