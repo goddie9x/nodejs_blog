@@ -6,7 +6,8 @@ const route = require('./routes');
 const db = require('./config/db');
 const methodOverride = require('method-override');
 const sortMiddleware = require('./app/middlewares/SortMiddleware');
-const port = 3000;
+
+app.set('port', process.env.PORT || 3000);
 
 db.connect();
 
@@ -59,6 +60,6 @@ app.use(sortMiddleware);
 //Route
 route(app);
 
-app.listen(port, () => {
-    console.log(`Listening at http://localhost:${port}`)
+app.listen(process.env.PORT || 3000, () => {
+    console.log(`Listening at http://localhost:${process.env.PORT || 3000}`)
 })
