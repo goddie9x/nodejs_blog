@@ -43,7 +43,5 @@
         "mongoose-slug-generator": "^1.0.4",
         "prettier": "^2.3.2"
     },
-    "devDependencies": {
-        "morgan": "^1.10.0"
-    }
+    "devDependencies": {}
 }

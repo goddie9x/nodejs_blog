@@ -1,6 +1,5 @@
 const express = require('express');
 const path = require('path');
-const morgan = require('morgan');
 const handlebars = require('express-handlebars');
 const app = express();
 const route = require('./routes');
@@ -12,7 +11,6 @@ const port = 3000;
 db.connect();
 
 app.use(express.static(path.join(__dirname, 'public')));
-/* app.use(morgan('combined')); */
 
 app.use(
     express.urlencoded({
