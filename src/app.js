@@ -3,7 +3,6 @@ const path = require('path');
 const morgan = require('morgan');
 const handlebars = require('express-handlebars');
 const app = express();
-const port = 3000;
 const route = require('./routes');
 const db = require('./config/db');
 const methodOverride = require('method-override');
@@ -60,7 +59,3 @@ app.use(methodOverride('_method'));
 app.use(sortMiddleware);
 //Route
 route(app);
-
-app.listen(port, () => {
-    console.log(`app listening at http://localhost:${port}`);
-});
